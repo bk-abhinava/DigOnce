@@ -4,7 +4,9 @@ import type {
   Plan, ValidationResult, Emergency, PolicyRule, Advisory, AuditEntry
 } from './types';
 
-const api = axios.create({ baseURL: '' });
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL || '',
+});
 
 // ── Health ────────────────────────────────────────────────────────────────────
 export const getHealth = () => api.get('/health').then(r => r.data);
