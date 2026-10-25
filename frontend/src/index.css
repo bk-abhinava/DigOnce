@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0f1c2e;
+  --navy-light: #1a2d45;
+  --cyan: #06b6d4;
+  --cyan-light: #22d3ee;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors;
+}
+
+.sidebar-link:hover {
+  @apply bg-white/10;
+}
+
+.sidebar-link.active {
+  @apply bg-white/20 text-white;
+}
+
+.card {
+  @apply bg-white border border-slate-200 rounded-xl p-5 shadow-sm;
+}
+
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-cyan-600 text-white rounded-lg text-sm font-medium hover:bg-cyan-700 transition-colors disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors;
+}
+
+.btn-danger {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors;
+}
+
+.btn-success {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors disabled:opacity-50;
+}
